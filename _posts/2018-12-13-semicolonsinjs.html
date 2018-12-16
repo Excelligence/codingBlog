@@ -1,0 +1,98 @@
+---
+title: Semicolons in Javascript
+layout: blogSinglePage
+excerpt: The semicolon in JavaScript is used to separate statements, but it can be omitted if the statement is followed by a line break
+author: Excelligence
+---
+
+<p>The semicolon in JavaScript is used to separate statements, but it can be omitted if the statement is followed by a line break (or there’s only <em>one</em> statement in a <code>{</code>block<code>}</code>)</p>
+<p>They are optional</p>
+<p>Javascript will automatically insert semi colons for you using ASI(automatic semi colon insertion)</p>
+<p>Reasons for using semi colons</p>
+<ul>
+<li>They are required when two statements are on same line to separate them.</li>
+<li>If your team is using it, then you can use it for uniformity.</li>
+
+</ul>
+<p>&nbsp;</p>
+<p>Invalid reason for using semi colon</p>
+<ul>
+<li>Thinking that it will protect you from ASI errors</li>
+
+</ul>
+{{site.cbs}}
+Example of one of the errors caused by automatic semi colon insertion
+function returnA () {
+return 4
+}
+//4
+function returnB () {
+    return
+     4
+    }
+//undefined
+
+//Second function is interpreted like this
+function returnC () {
+    return;
+     4;
+    }
+console.log(returnA(),
+returnB(),
+returnC(),)
+{{site.cbe}}
+<p>Adding semi colons will not help you in the above error. The ASI will insert a semi colon after the return statement.</p>
+<h3>Errors causes by not using semi colons</h3>
+<p>When Looping through an array</p>
+{{site.cbs}}//This will give an error
+[1,2,3].forEach
+{{site.cbe}}
+<p>It can be solved by inserting a semi colon at the beginning </p>
+{{site.cbs}}//Assign array to a variable and use forEach
+const arr=[1,2,3]
+arr.forEach
+
+{{site.cbe}}
+<p>When using an IIFE</p>
+{{site.cbs}}(function(){
+   //function body 
+}());
+//This will produce error.
+
+// Can be resolved using a semi colon
+
+;(function(){
+   //function body 
+}());
+
+{{site.cbe}}
+<h3>Situations to avoid semi colons</h3>
+<p>After a closing curly bracket except for an assignment statement.</p>
+{{site.cbs}}// NO semicolons after }:
+if  (...) {...} else {...}
+for (...) {...}
+while (...) {...}
+
+// BUT:
+do {...} while (...);
+
+// function statement: 
+function (arg) { /*do this*/ } // NO semicolon after }
+{{site.cbe}}
+<p>After the round bracket of an if, for, while or switch statement</p>
+{{site.cbs}}if (0 === 1); { alert(&quot;hi&quot;) }
+
+// equivalent to:
+
+if (0 === 1) /*do nothing*/ ;
+alert (&quot;hi&quot;);
+{{site.cbe}}
+<h4>The less confusing path</h4>
+<ul>
+<li>Assign your arrays to variable and loop through them.</li>
+<li>Use a semi colon before IIFE.</li>
+<li>Don&#39;t use semi colons other than that.</li>
+
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

@@ -1,0 +1,70 @@
+---
+title: CURL Reference
+layout: blogSinglePage
+excerpt: CURL Reference for beginners.
+---
+<h3>CURL</h3>
+<p>&nbsp;</p>
+<h5>Can be used for testing end points downloading files</h5>
+<p>&nbsp;</p>
+<p>for grabbing a url</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl &lt;url&gt;{{site.cbe}}
+<p>&nbsp;</p>
+<p>to output to a file</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl -o &lt;fileName&gt; &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>to include header information</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl -i &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>to just get head</p>
+<p>&nbsp;</p>
+<p>-I or --head</p>
+<p>&nbsp;</p>
+<p>to download file with curl</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl -O &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>Post request</p>
+<p><url> is the post request url</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl -d &quot;title=Hello&amp;body=Hello World&quot; &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>PUT Request</p>
+{{site.cbs}}curl -X PUT -d &quot;title=Hello&quot; &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>Delete Request</p>
+{{site.cbs}}curl -X DELETE &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>For secure routes</p>
+<p>&nbsp;</p>
+{{site.cbs}}curl -u &lt;username&gt;:&lt;password&gt; &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>Follow redirection</p>
+{{site.cbs}}curl -L &lt;url&gt;
+{{site.cbe}}
+<p>&nbsp;</p>
+<p>FTP Protocol</p>
+<p>&nbsp;</p>
+<p>Uploading a file using CURL</p>
+<p>&nbsp;</p>
+<p>curl -u <a href='mailto:test@traversymedia.com' target='_blank' class='url'>test@traversymedia.com</a>:12345 -T <fileName> ftp://ftp.traversymedia.com</p>
+<p>&nbsp;</p>
+<p>curl -u <username>:<password> -T <fileName> <ftp url></p>
+<p>Download files by ftp</p>
+<p>&nbsp;</p>
+<p>curl -u <username>:<password> -O  <ftp url>/<filepath></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

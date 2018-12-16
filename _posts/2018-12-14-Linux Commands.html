@@ -1,0 +1,146 @@
+---
+title: Linux Commands reference
+layout: blogSinglePage
+author: Excelligence
+excerpt: A reference document containing linux commands.
+---
+<p>Notes for Linux bash crash course</p>
+<h3>ls</h3>
+<p>liststorage</p>
+<h3>~</h3>
+<p>represents your home folder</p>
+<h3>$</h3>
+<p>indicates you are a standard user ie to don&#39;t have adminstrative privileges</p>
+<h3>pwd</h3>
+<p>print present working directory</p>
+<h3>Absolute path</h3>
+<h3>Relative path</h3>
+<p> How to get somewhere from where you are now</p>
+<h3>ls<pathname></h3>
+<h3>options for ls</h3>
+<h4>-a</h4>
+<p>list all files</p>
+<h4>-l</h4>
+<p>gives a long list with more details like file permissions</p>
+<h3>cd</h3>
+<p>cd with no arguments goes to home directory.
+if you hit tab twice after cd <some path> you will get the options for auto completion</p>
+<h3>pushd and popd</h3>
+<p>to go another directory with ab reference to current directory. After working in the new directory you can use popd to come back.</p>
+{{site.cbs}}$ pushd /etc
+{{site.cbe}}
+<p>after working in etc</p>
+{{site.cbs}}$ popd
+{{site.cbe}}
+<h3>file</h3>
+<p>will give the details of file</p>
+<h3>locate</h3>
+{{site.cbs}}$ locate fstab
+{{site.cbe}}
+<p>to find files.
+locate takes its data from a database. so you have to update it.</p>
+{{site.cbs}}$ sudo updatedb
+{{site.cbe}}
+<h3>which</h3>
+<p>to find out whether a command is installed or where it is</p>
+{{site.cbs}}$ which cal
+{{site.cbe}}
+<h3>history</h3>
+<p>last 1000 unique commands</p>
+<h2>Getting Help</h2>
+<h3>whatis</h3>
+<h3>apropos</h3>
+{{site.cbs}}$ apropos time
+{{site.cbe}}
+<h3>man</h3>
+<p>    $ man man</p>
+<p>will give manual for man command</p>
+<h3>mkdir</h3>
+{{site.cbs}}$ mkdir Junk Junk1 Junk2
+{{site.cbe}}
+<h3>touch</h3>
+<p>creates a file if it does not exist.
+updates date modified if the file exists</p>
+{{site.cbs}}$ touch file1 file2 file3
+{{site.cbe}}
+<h3>cp</h3>
+<p>    $ cp ~/.bashrc bashrc</p>
+<h3>mv</h3>
+<p>to move and rename files</p>
+<h3>rm</h3>
+{{site.cbs}}    $ rm *
+{{site.cbe}}
+<p>to remove everything in the folder
+​    $ rm file*
+to remove all files with file in them
+​    $ rm -r
+to remove directories</p>
+<h3>rmdir</h3>
+<p>Removes directories without files</p>
+<h3>cat</h3>
+<p>shows contents of a file
+​    $ cat file1</p>
+{{site.cbs}}$ cat  &gt;&gt;  file
+{{site.cbe}}
+<p>now you can enter the contents.
+Ctrl+d to exit while done.</p>
+<p>cat is short for concatenate. You can cat two files.</p>
+<h3>more</h3>
+<p>to see files page by page
+you can use q to exit before end</p>
+<h3>less</h3>
+<p>let you do more stuff, scroll line by line, search for text etc</p>
+<h3>nano</h3>
+<p>text editing</p>
+<h3>redirection</h3>
+<p>    $ cat &gt; file
+to create a file and a add content.
+​     $ cat &gt;&gt; file
+to append to a file</p>
+<h3>piping</h3>
+<p>taking output from one programme and putting into another
+​    $ history | less</p>
+<h3>Redirection</h3>
+<p>    $ ls -al / &gt; lsout.txt
+###sudo</p>
+<p>&nbsp;</p>
+<p>to retain super user privileges for some time</p>
+<p>sudo -s
+$  will change to #
+exit to exit</p>
+<h3>su</h3>
+<p>su - user
+su user
+su
+don&#39;t do this in Ubuntu due to security issues</p>
+<h3>users</h3>
+<p>gives uses logged in</p>
+<h3>id</h3>
+<h3>File Permissions</h3>
+<p>Read write and execute permissions</p>
+{{site.cbs}}$ chmod +x filename
+{{site.cbe}}
+<p>chmod stands for change mode</p>
+<p>there is one number system for changing file permissions. Dig that deeper for understanding it.</p>
+<h2>Killing Processes</h2>
+<p>Ctrl c kills a command</p>
+<h3>killall</h3>
+<p>    $ killall firefox</p>
+<h3>to exit bash</h3>
+<p>exit
+Ctrl d</p>
+<h2>For clearing screen</h2>
+<p>Ctrl l
+may be this will work only an emulator</p>
+<p>##to make text bigger
+Ctrl +
+to make smaller
+Ctrl -</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
