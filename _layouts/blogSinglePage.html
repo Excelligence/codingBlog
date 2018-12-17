@@ -16,6 +16,8 @@ layout: default
       <!-- Date/Time -->
       <p> Posted on {{ page.date | date: "%b %-d, %Y" }}</p>
              {{content}}
+
+             {% include paginationSnippet.html %}
         </div>
     </div>
 </div>
