@@ -10,37 +10,35 @@ lang: 'lang-js'
   <img class="img-fluid rounded" src='{{ "/img/textcontent vs create text node.png" | absolute_url }}'  alt="">
       <!-- Post Content -->
       <h5>Introduction</h5>
-      <p class="lead">textContent can be used to change text of an existing element. This will replace existing content with new content. createTextNode can be used to add to existing text content.
+      <p>This short post explores the key difference between textContent and createTextNode properties in javascript. textContent is used to change text of an existing element. This will replace existing content with new content. createTextNode is used to add to existing text content.
       </p>
-      
+      I have explained it with the HTML and JS below.
 
-    
-      <p class="lead">
-        HTML
+        <h5>HTML</h5>
+        <p> We have a paragraph element with some text.</p>    
+       
        {{site.html}}
         &lt;p id='para'&gt;Lorem ipsum dolor sit amet laboriosam dicta fugit? &lt;/p&gt;
      {{site.cbe}}
       </p>
 
-      <p class="lead">
-            JavaScript
+      <h5>JavaScript</h5>
+        <p>Here we are grabbing the element with id 'para' to a variable p</p>   
        {{site.js}}
         const p =document.getElementById('para');
      {{site.cbe}}
       </p>
 
-      <p class="lead">
-            This will append.
+      <p>In next step we create a text node and append that to the paragraph element. This will add to the existing content of paragraph element. It will not replace it.</p>
+           
        {{site.js}}
         p.append(document.createTextNode(' This created text node text'))
      {{site.cbe}}
-      </p>
-
-
-      <p class="lead">
-            This will replace with new text
+     <p> In contrast if we use textContent as demonstrated below the existing text will be replaced with new text.</p>
        {{site.js}}
         p.textContent='this is the changed text';
      {{site.cbe}}
       </p>
-<div>
+      <p>You can verify each of the above output by logging them to console.</p>
+</div>
+

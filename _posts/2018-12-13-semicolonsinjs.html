@@ -1,27 +1,29 @@
 ---
 title: Semicolons in Javascript
 layout: blogSinglePage
-excerpt: The semicolon in JavaScript is used to separate statements, but it can be omitted if the statement is followed by a line break
+excerpt: The semicolon in JavaScript is used to separate statements, they are optional in Javascript. Read the full article to know whether you should use or discard it.
 author: Excelligence
 ---
 <div class="lang-js">
 <p>The semicolon in JavaScript is used to separate statements, but it can be omitted if the statement is followed by a line break (or there’s only <em>one</em> statement in a <code>{</code>block<code>}</code>)</p>
-<p>They are optional</p>
-<p>Javascript will automatically insert semi colons for you using ASI(automatic semi colon insertion)</p>
-<p>Reasons for using semi colons</p>
+<p>They are optional in Javascript</p>
+<p>Javascript will automatically insert semi colons for you using ASI(automatic semi colon insertion) if you avoid them.</p>
+<h5>Reasons for using semi colons</h5>
 <ul>
-<li>They are required when two statements are on same line to separate them.</li>
+<li>They are required when two statements are on same line to separate the lines.</li>
 <li>If your team is using it, then you can use it for uniformity.</li>
 
 </ul>
 <p>&nbsp;</p>
-<p>Invalid reason for using semi colon</p>
+<h5>Some invalid reasons for using semi colon</h5>
 <ul>
 <li>Thinking that it will protect you from ASI errors</li>
 
 </ul>
+
+<p>Adding semi colons will not help you in the following error. The ASI will insert a semi colon after the return statement.</p>
 {{site.js}}
-Example of one of the errors caused by automatic semi colon insertion
+//Example of one error caused by automatic semi colon insertion
 function returnA () {
 return 4
 }
@@ -41,19 +43,31 @@ console.log(returnA(),
 returnB(),
 returnC(),)
 {{site.cbe}}
-<p>Adding semi colons will not help you in the above error. The ASI will insert a semi colon after the return statement.</p>
-<h3>Errors causes by not using semi colons</h3>
-<p>When Looping through an array</p>
+<br>
+
+<h5>Errors caused by not using semi colons</h5>
+<p>There are a handful of situations when not using semicolons will land you in trouble.
+    I have listed two such cases here.
+</p>
+
+
+
+<p>1.When Looping through an array</p>
 {{site.cbs}}//This will give an error
 [1,2,3].forEach
 {{site.cbe}}
 <p>It can be solved by inserting a semi colon at the beginning </p>
-{{site.cbs}}//Assign array to a variable and use forEach
+
+{{site.cbs}}//Add Semi colon at the beginning
+;[1,2,3].forEach
+{{site.cbe}}
+<p>or</p>
+Assign array to a variable and use forEach
+{{site.cbs}}
 const arr=[1,2,3]
 arr.forEach
-
 {{site.cbe}}
-<p>When using an IIFE</p>
+<p>2.When using an IIFE(Immediately Invoked Function Expression)</p>
 {{site.cbs}}(function(){
    //function body 
 }());
@@ -66,8 +80,8 @@ arr.forEach
 }());
 
 {{site.cbe}}
-<h3>Situations to avoid semi colons</h3>
-<p>After a closing curly bracket except for an assignment statement.</p>
+<h5>Situations to avoid semi colons</h5>
+<p>After a closing curly bracket <strong>except</strong> for an assignment statement.</p>
 {{site.cbs}}// NO semicolons after }:
 if  (...) {...} else {...}
 for (...) {...}
@@ -87,7 +101,7 @@ function (arg) { /*do this*/ } // NO semicolon after }
 if (0 === 1) /*do nothing*/ ;
 alert (&quot;hi&quot;);
 {{site.cbe}}
-<h4>The less confusing path</h4>
+<h5>The less confusing path and what I have chosen regarding semi colons</h5>
 <ul>
 <li>Assign your arrays to variable and loop through them.</li>
 <li>Use a semi colon before IIFE.</li>
