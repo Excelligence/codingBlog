@@ -3,32 +3,35 @@ title: textContent vs createTextNode
 layout: blogSinglePage
 excerpt: textContent can be used to change text of an existing element. This will replace existing content with new content. createTextNode can be used to add to existing text content.
 author: Excelligence
+lang: 'lang-js'
 ---
-
+      <div class="lang-html">
   <!-- Preview Image -->
   <img class="img-fluid rounded" src='{{ "/img/textcontent vs create text node.png" | absolute_url }}'  alt="">
       <!-- Post Content -->
       <h5>Introduction</h5>
       <p class="lead">textContent can be used to change text of an existing element. This will replace existing content with new content. createTextNode can be used to add to existing text content.
       </p>
+      
+
     
       <p class="lead">
         HTML
-       {{site.cbs}}
+       {{site.html}}
         &lt;p id='para'&gt;Lorem ipsum dolor sit amet laboriosam dicta fugit? &lt;/p&gt;
      {{site.cbe}}
       </p>
 
       <p class="lead">
             JavaScript
-       {{site.cbs}}
+       {{site.js}}
         const p =document.getElementById('para');
      {{site.cbe}}
       </p>
 
       <p class="lead">
             This will append.
-       {{site.cbs}}
+       {{site.js}}
         p.append(document.createTextNode(' This created text node text'))
      {{site.cbe}}
       </p>
@@ -36,8 +39,8 @@ author: Excelligence
 
       <p class="lead">
             This will replace with new text
-       {{site.cbs}}
+       {{site.js}}
         p.textContent='this is the changed text';
      {{site.cbe}}
       </p>
-
+<div>

@@ -15,9 +15,14 @@ layout: default
       <hr>
       <!-- Date/Time -->
       <p> Posted on {{ page.date | date: "%b %-d, %Y" }}</p>
-             {{content}}
+      <!-- container for prismjs language -->
+      <div class={{page.lang}}>
+          {{content}}
 
-             {% include paginationSnippet.html %}
+      </div>
+             
+
+             {% include pagination.html %}
         </div>
     </div>
 </div>

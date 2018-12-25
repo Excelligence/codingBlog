@@ -11,13 +11,20 @@ excerpt: What are the major difference between above properties.
 <li>used to set or return HTML Content of an element</li>
 <li>The innerHTML property returns the text, including all spacing and inner element tags. </li>
 
+
+### innerHTML
+<li>innerHTML can be text content or HTML Source code</li>
+<li>used to set or return HTML Content of an element</li>
+<li>The innerHTML property returns the text, including all spacing and inner element tags. </li>
+
 </ul>
 <h4>Setting HTML using innerHTML</h4>
 <p>HTML</p>
-{{site.cbs}}&lt;p id=&quot;output&quot;&gt;Lorem ipsum dolor sit amet &lt;strong&gt;consectetur adipisicing elit. Ipsam &lt;/p&gt;
+{{site.html}}
+&lt;p id=&quot;output&quot;&gt;Lorem ipsum dolor sit amet &lt;strong&gt;consectetur adipisicing elit. Ipsam &lt;/p&gt;
 {{site.cbe}}
 <p>Javascript</p>
-{{site.cbs}}&lt;script&gt;
+{{site.js}}&lt;script&gt;
 const output = document.getElementById(&#39;output&#39;);
 
  output.innerHTML=&#39;This is the &lt;strong&gt; text &lt;/strong&gt; content to be output&#39;

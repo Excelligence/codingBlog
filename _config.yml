@@ -44,6 +44,9 @@ paginate_path: "/page:num/"
 #   - vendor/ruby/
 
 name: My Jekyll Website
-cbs: <pre class="bg-dark text-warning rounded p-2"><code>
+cbs: <pre><code>
 cbe: </code></pre>
+html: <pre><code class="language-html">
+css: <pre><code class="language-css">
+js: <pre><code class="language-js">
 
