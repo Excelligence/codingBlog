@@ -1,0 +1,27 @@
+{
+  "name": "codingblog",
+  "version": "1.0.0",
+  "description": "my encaptcha blog",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Excelligence/codingBlog.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Excelligence/codingBlog/issues"
+  },
+  "homepage": "https://github.com/Excelligence/codingBlog#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "grunt": "^1.0.3",
+    "gulp": "^4.0.0"
+  },
+  "dependencies": {
+    "grunt-browser-sync": "^2.2.0"
+  }
+}

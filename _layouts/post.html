@@ -6,7 +6,7 @@ layout: default
         <!-- Post Content Column -->
         <div class="col-lg-8 mx-auto">
             <!-- Title -->
-      <h1 class="mt-4">{{page.title}}</h1>
+      <h3 class="mt-4">{{page.title}}</h3>
       <!-- Author -->
       <!-- <p class="lead">
         by
@@ -14,7 +14,7 @@ layout: default
       </p> -->
       <hr>
       <!-- Date/Time -->
-      <p> Posted on {{ page.date | date: "%b %-d, %Y" }}</p>
+      <p> Updated on {{ page.date | date: "%b %-d, %Y" }}</p>
       <!-- container for prismjs language -->
       <div class={{page.lang}}>
           {{content}}
