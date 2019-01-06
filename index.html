@@ -1,4 +1,36 @@
 ---
-title: Home
-layout: blogList
+layout: default
 ---
+<section id="showcase">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-white">
+        <div id="welcome-message"class="d-flex flex-column justify-content-center">
+                <p class="display-3">Welcome to our site.</p>
+                <p class="h4">Here we share what we learn about Programming, Technology and Selling.</p>
+        </div>
+        <h3>Recent Articles</h3>
+
+     <div id="recent-articles" class="card-deck">
+                    {% for post in site.posts limit:3 %}
+                 
+                    <div class="card border-secondary mb-3" style="max-width: 22rem;">
+                            <div class="card-header bg-transparent border-dark">
+                                
+                            </div>
+                            <div class="card-body text-dark">
+                              <h5 class="card-title">{{ post.title }}</h5>
+                              <p class="card-text">{{ post.excerpt }}</p>
+                             
+                            </div>
+                            <div class="card-footer bg-transparent border-dark">
+                                    <a href="{{post.url}}" class="btn btn-block btn-dark">Read More</a>
+                            </div>
+                          </div>
+                    {% endfor %}
+                    </div>
+    </div>
+  
+        </div>
+    </div>
+</section>
