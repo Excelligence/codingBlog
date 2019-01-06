@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<section id="showcase">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-white">
+        <div id="welcome-message"class="d-flex flex-column justify-content-center">
+                <p class="display-3">Welcome to our site.</p>
+                <p class="h4">Here we share what we learn about Programming, Technology and Selling.</p>
+        </div>
+        <h3>Recent Articles</h3>
+
+        <ul>
+               
+                  <li>
+                    <h2><a href="{{ post.url }}"></a></h2>
+                    <p></p>
+                  </li>
+               
+              </ul>
+        
+              <div class="card-deck">
+                    {% for post in site.posts %}
+                 
+                    <div class="card border-secondary mb-3" style="max-width: 22rem;">
+                            <div class="card-header bg-transparent border-secondary">
+                                
+                            </div>
+                            <div class="card-body text-secondary">
+                              <h5 class="card-title">{{ post.title }}</h5>
+                              <p class="card-text">{{ post.excerpt }}</p>
+                             
+                            </div>
+                            <div class="card-footer bg-transparent border-secondary">
+                                    <a href="{{post.url}}" class="btn btn-block btn-secondary">Read More</a>
+                            </div>
+                          </div>
+                    {% endfor %}
+                    </div>
+    </div>
+  
+        </div>
+    </div>
+</section>
