@@ -1,0 +1,85 @@
+---
+---
+@import 'variables';
+@import 'bootstrap/scss/bootstrap.scss';
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-top: 92px; 
+      margin-bottom: 142px; /* Margin bottom by footer height */
+    }
+    #showcase{
+       font-family: 'Righteous';
+      min-height: 100vh;
+    
+     
+  
+      background: #373B44;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
+    }
+    #welcome-message{
+      min-height: 50vh;
+    }
+    #recent-articles{
+      font-family:"Helvetica Neue", Helvetica, Arial, sans-serif
+    }
+   
+  /* blockquote{
+    background-color:#f9f9f9;
+    border-radius: 5px;
+    padding: 10px 0px 5px 10px;
+    border-left: 5px solid #d3d3d3;
+  } */
+  
+  blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote p {
+    display: inline;
+  }
+  pre{
+    max-height: 400px;
+  }
+  code{
+    
+    padding: 0.1rem 0.5rem 0.2rem 0.5rem !important
+  }
+  #main-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+  
+  }
+  
+    /* padding-top: 10px;
+    padding-bottom: 5px;
+  } */
+    /* pre {    
+      background:#F8F8F8;    
+      border: 1px solid #ddd;    
+      border-left: 3px solid #FF6666 !important;    
+      color:black ;    
+      page-break-inside: avoid;    
+      font-family: monospace;    
+      font-size: 15px;    
+      line-height: 1.6;    
+      margin-bottom: 1.6em;    
+      max-width: 100%;    
+      overflow: auto;   
+      padding: 1rem;    
+      display: block;    
+      word-wrap: break-word;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    } */

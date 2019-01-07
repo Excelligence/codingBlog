@@ -1,0 +1,30 @@
+---
+title: Blog
+layout: default
+---
+<!-- This loops through the paginated posts -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto mt-3">
+           {% for post in paginator.posts %}
+            <div class="card  mb-4">
+                <div class="card-body">
+                <h3 class="card-title">{{post.title}}</h3>
+                <p class="card-text">{{post.excerpt}}</p>
+                <a href="{{ post.url }}" class="btn btn-outline-secondary text-dark">Read More &rarr;</a>
+
+                <!-- blockquote styling given to p because of conflict with markdown blockquote -->
+                <p class="blockquote-footer my-2">
+                    Posted on {{ post.date | date: "%b %-d, %Y" }}
+                  
+                </p>
+            </div>
+            
+        </div>
+        {% endfor %}
+<!-- Pagination links -->
+{% include pagination.html %}
+       
+</div>
+</div>
+</div>

@@ -50,3 +50,11 @@ html: <pre><code class="language-html">
 css: <pre><code class="language-css">
 js: <pre><code class="language-js">
 
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+        
+exclude: []
+
