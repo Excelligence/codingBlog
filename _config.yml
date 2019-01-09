@@ -60,5 +60,4 @@ sass:
         - _sass
         - node_modules
         
-exclude: []
 
