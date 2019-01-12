@@ -14,14 +14,7 @@ html {
     }
     #showcase{
        font-family: 'Righteous';
-      min-height: 100vh;
-    
-     
-  
-      background: #373B44;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      
+      min-height: 100vh;   
     }
     #welcome-message{
       min-height: 50vh;
@@ -85,9 +78,9 @@ html {
     } */
 
 #post-page{
-  background:linear-gradient(to right, rgba(66,134,244,0.4), rgba(64,125,224,0.1));
+  // background:linear-gradient(to right, rgba(66,134,244,0.4), rgba(64,125,224,0.1));
 }
   
 #blog-page{
-  background:linear-gradient(to right, rgba(66,134,244,1), rgba(64,125,224,0.3));
+  // background:linear-gradient(to right, rgba(66,134,244,1), rgba(64,125,224,0.3));
 }
