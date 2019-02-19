@@ -9,12 +9,12 @@ layout: default
                 <p class="display-3">Welcome to our site.</p>
                 <p class="h4">Here we share what we learn about Programming, Technology and Selling.</p>
         </div>
-        <h3 class="text-dark">Recent Articles</h3>
+        <h3 class="text-dark roboto">Recent Articles</h3>
 
-     <div id="recent-articles" class="card-deck">
+     <div id="recent-articles">
                     {% for post in site.posts limit:3 %}
                  
-                    <div class="card border-secondary mb-3" style="max-width: 22rem;">
+                    <!-- <div class="card border-secondary mb-3" style="max-width: 22rem;">
                             <div class="card-header bg-transparent border-dark">
                                 
                             </div>
@@ -26,7 +26,23 @@ layout: default
                             <div class="card-footer bg-transparent border-dark">
                                     <a href="{{post.url}}" class="btn btn-block btn-primary">Read More</a>
                             </div>
-                          </div>
+                          </div> -->
+
+
+                          <div class="card  mb-4 text-dark">
+                            <div class="card-body">
+                            <h3 class="card-title">{{post.title}}</h3>
+                            <p class="card-text">{{post.excerpt}}</p>
+                            <a href="{{ post.url }}" class="btn btn-outline-secondary text-dark">Read More &rarr;</a>
+            
+                            <!-- blockquote styling given to p because of conflict with markdown blockquote -->
+                            <p class="blockquote-footer my-2">
+                                Posted on {{ post.date | date: "%b %-d, %Y" }}
+                              
+                            </p>
+                        </div>
+                        
+                    </div>
                     {% endfor %}
                     </div>
     </div>
