@@ -91,3 +91,29 @@ html {
 #blog-page{
   // background:linear-gradient(to right, rgba(66,134,244,1), rgba(64,125,224,0.3));
 }
+
+#post-page
+{
+  li{
+    list-style: none;
+    position: relative;
+    margin:10px 0px;
+  
+  }
+  li::before{
+    content:'';
+ 
+    display:inline-block;
+    width:0px;
+    height:0px;
+  border-top:8px solid transparent;
+  /* border-right:60px solid red; */
+  border-bottom:8px solid transparent;
+  border-left:8px solid rgb(56, 53, 53);
+  position: absolute;
+left:-15px;
+top:5px;
+margin-bottom: 5px;
+
+  }
+}
