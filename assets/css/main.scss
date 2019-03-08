@@ -3,6 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Josefin+Slab');
 @import 'variables';
 @import 'bootstrap/scss/bootstrap.scss';
 
@@ -10,22 +13,39 @@ html {
     position: relative;
     min-height: 100%;
   }
+  h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+  }
   
   body {
     margin-top: 92px; 
       margin-bottom: 142px; /* Margin bottom by footer height */
     }
     #showcase{
-      font-family: 'Staatliches', cursive;
+      // // font-family: 'Open Sans', sans-serif;
+      // font-family: 'Josefin Sans', sans-serif;
       min-height: 100vh;   
+      padding-top: 10vh;
+      h1{
+        text-align: right;
+      }
+      h4{
+        text-align: justify;
+      }
+     
      
     }
     #welcome-message{
       min-height: 20vh;
+      p{
+        padding:0 20px;
+        text-align: center;
+      }
     }
-    .roboto{
-      font-family: 'Roboto', sans-serif;
-    }
+    
+    // .roboto{
+    //   font-family: 'Roboto', sans-serif;
+    // }
     #recent-articles{
       font-family: 'Roboto', sans-serif;
     }
