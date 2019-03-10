@@ -16,9 +16,13 @@ html {
   h1,h2,h3,h4,h5,h6{
     font-family: 'Josefin Sans', sans-serif;
   }
+
+  .text-center{
+    text-align: center !important;
+  }
   
   body {
-    margin-top: 92px; 
+    // margin-top: 92px; 
       margin-bottom: 142px; /* Margin bottom by footer height */
     }
     #showcase{
@@ -26,12 +30,17 @@ html {
       // font-family: 'Josefin Sans', sans-serif;
       min-height: 100vh;   
       padding-top: 10vh;
-      h1{
-        text-align: right;
+      .jumbotron{
+        h1{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+
       }
-      h4{
-        text-align: justify;
-      }
+    
+     
      
      
     }
@@ -109,7 +118,7 @@ html {
 }
   
 #blog-page{
-  // background:linear-gradient(to right, rgba(66,134,244,1), rgba(64,125,224,0.3));
+margin-top:92px;
 }
 
 #post-page
