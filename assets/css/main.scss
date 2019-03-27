@@ -1,6 +1,6 @@
 ---
 ---
-
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Staatliches');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -14,7 +14,8 @@ html {
     min-height: 100%;
   }
   h1,h2,h3,h4,h5,h6{
-    font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
   }
 
   .text-center{
@@ -24,6 +25,7 @@ html {
   body {
     // margin-top: 92px; 
       margin-bottom: 142px; /* Margin bottom by footer height */
+      font-family: 'Raleway', sans-serif;
     }
     #showcase{
       // // font-family: 'Open Sans', sans-serif;
@@ -55,9 +57,9 @@ html {
     // .roboto{
     //   font-family: 'Roboto', sans-serif;
     // }
-    #recent-articles{
-      font-family: 'Roboto', sans-serif;
-    }
+    // #recent-articles{
+    //   font-family: 'Roboto', sans-serif;
+    // }
    
   /* blockquote{
     background-color:#f9f9f9;
